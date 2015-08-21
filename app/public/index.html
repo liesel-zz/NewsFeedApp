@@ -3,15 +3,61 @@
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="../../bower_components/materialize/bin/materialize.css">
+	<link rel="stylesheet" type="text/css" href="../../app/public/css/app.css">
+
 </head>
-<body>
-testes
-<div ng-app="NewsFeedApp">
-	<div ng-model="DemoCtrl">
-		
-	</div>
-</div>
+<body ng-app="NewsFeedApp" ng-controller="DemoCtrl"> 
+<header>
+	<nav class="top-nav light-blue darken-1">
+        <div class="container">
+          <div class="row">
+            <div class="col s12 m9">
+              Hello, {{me.name}}
+            </div>
+            <div class="col s12 m3">
+            	<a class="waves-effect waves-light btn light-blue darken-4" ng-click="loginToggle()">{{loginLagel}}</a>
+                <a class="waves-effect waves-light btn light-blue darken-4" ng-click="share()" ng-show="logged">SHARE</a>
+              	</ul>	
+            </div>
+          </div>
+        </div>
+      </nav>
+</header><!-- /header -->
+
+<main>
+	<ul class="collection" ng-repeat="friend in friends">
+    <li class="collection-item avatar">
+      <img src="../../app/public/images/{{$index}}.jpg" alt="" class="circle">
+      <p>{{friend.name}}</p>
+    </li>
+  </ul>
+</main>
+
+
+<footer class="page-footer light-blue darken-1">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                
+                <p class="grey-text text-lighten-4">Hey! See my site! You can found nice things there!</p>
+                <p class="grey-text text-lighten-4"><a href="http://www.cafecomjava.com.br" "My site" target="_blank">www.cafecomjava.com.br</a></p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Thanks for the oportunity ;)</h5>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            2015 Copyright 
+            <a class="grey-text text-lighten-4 right" href="#!">See you soon!</a>
+            </div>
+          </div>
+        </footer>
+	
+
 <script src="../../bower_components/angular/angular.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../bower_components/angular-resource/angular-resource.js" type="text/javascript" charset="utf-8"></script>
 <script src="../../bower_components/ng-facebook/ngFacebook.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/NewsFeedApp.js" type="text/javascript" charset="utf-8" ></script>
 <script src="../../bower_components/jquery/dist/jquery.js" type="text/javascript" charset="utf-8" ></script>
