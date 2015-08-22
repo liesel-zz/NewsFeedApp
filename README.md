@@ -27,3 +27,6 @@ Now you can access the application acessing
 
 To integrate with Facebook i used the following api. 
 [ngFacebook](https://github.com/GoDisco/ngFacebook)
+
+Remember the Facebook api has chnaged. So, to see friends in yout list after you log in your friends needs to authorize the application as well. 
+
