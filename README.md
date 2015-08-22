@@ -24,3 +24,6 @@ $ node app.js
 Now you can access the application acessing 
 
 [http://localhost:3000](http://localhost:3000)
+
+To integrate with Facebook i used the following api. 
+[ngFacebook](https://github.com/GoDisco/ngFacebook)
